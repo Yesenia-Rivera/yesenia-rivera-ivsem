@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
+:root {
+    --main-white-color: #f2f2f2;
+    --main-black-color: black;
+    --main-purple-color: #686367;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+button {
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    font: 16px/1.5 "dosis", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-padre {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+   
+    margin: auto;
+}
+.flex-padre > * {
+    padding: 20px;
+}
+
+
+.cabecera {
+    background: var(--main-white-color)
+}
+
+.cabecera nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.cabecera ul {
+    font-size: 1.3em;
+    display: flex;
+    order: 1;
+    width: 100%;
+    margin-top: 15px;
+}
+.cabecera ul li a:hover {
+    background: rgba(128, 122, 122, 0.445);
+    padding: 5px;
+    border-radius: 10px;
+    transition: all .4s;
+}
+.cabecera ul li:not(:last-child) {
+    padding-right: 15px;
+}
+
+.cabecera .boton-contacto {
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 5px 18px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.contenido-pagina {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    object-fit: cover;
+    flex-grow: 1;
+    background: var(--main-purple-color)
+    url(https://cdn.pixabay.com/photo/2016/11/23/00/32/apple-1851464_960_720.jpg) no-repeat
+    center / cover;
+    background-blend-mode: luminosity;
+    color: var(--main-white-color);
+    height: 1000px;
+ 
+}
+
+.contenido-pagina div {
+    max-width: 500px;
+    display: block;
+    font-size: 1.5em;
+}
+
+.contenido-pagina h1 {
+    margin-bottom: 20px;
+}
+.contenido-pagina p + p {
+    margin-top: 10px;
+}
+
+.contenido-pagina div {
+    max-width: 550px;
+}
+
+.contenido-pagina div .contacto-banner {
+    font-size: 1.1rem;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    padding: 5px 15px;
+    margin-top: 1.5em;
+    left: 0;
+}
+    .contenido-pagina div .contacto-banner:hover {
+        background: rgba(39, 38, 38, 0.74);
+        color: white;
+        transition: .4s;
+    }
+
+
+
+.pie-pagina {
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column-reverse;
+    background: var(--main-white-color);
+}
+
+.pie-pagina ul {
+    display: flex;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.pie-pagina ul li {
+    margin-right: 20px;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 490px) {
+    .pie-pagina ul li {
+        font-size: 10px;
+    }
+}
+
+
+
+@media screen and (min-width: 550px) {
+    .pie-pagina {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .pie-pagina {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .cabecera ul {
+        width: auto;
+        margin-top: 0;
+    }
+    .cabecera .boton-contacto {
+        order: 1;
+    }
+  
+}
+@media screen and (min-width: 768px) {
+    .contenido-pagina {
+        padding-left: 90px;
+    }
+}
+@media (max-width: 600px) {
+    .contenido-pagina {
+        height: 300px;
+    }
+}
+
+
+
+h4 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-decoration: underline;
+    background: rgba(236, 229, 229, 0.747);;
+
+}
+.servicios-pagina {
+    background: rgba(236, 229, 229, 0.747);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    overflow: hidden;
+    
+}
+.servicios-pagina>img {
+    width: 30%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    display: block;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    overflow: hidden;
+    background-blend-mode: luminosity;
+    color: rgb(155, 146, 146);
+    opacity: 0.7;
+}
+    .servicios-pagina>img:hover {
+        filter: blur(5px);
+    }
+    
+.servicios-pagina div {
+    background: rgba(73, 70, 73, 0.753);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+
+
+    height: 420px;
+    border: 1.5px solid black;
+    margin: 10px;
+    width: 30%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    display: block;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+@media screen and (max-height: 500px) {
+    .servicios-pagina>img {
+        flex-direction: column;
+    }
+}
+
+.contact {
+    text-align: center;
+    background: rgba(236, 229, 229, 0.747);
+}
+    .contact h3 {
+        font-size: 3em;
+        
+        text-decoration: underline;
+    }
+
+.contact ul {
+    margin-top: 100px;
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 10px;
+    justify-content: center;
+    box-shadow: #333;
+}
+    .contact ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        font-size: 30px;
+        height: 200px;
+        width: 30%;
+        margin: 10px;
+        background: rgba(223, 209, 209, 0.671);
+        padding: 10px;
+        
+        box-shadow: #333;
+    }
+        .contact ul li i {
+            font-size: 50px;
+            color: lightcoral;
+        }
+
+
+@media (max-width: 700px) {
+    .contact h3 {
+        margin: auto;
+    }
+    .contact ul li {
+        margin: auto;
+        display: flex;
+
+        flex-direction: column;
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+}
