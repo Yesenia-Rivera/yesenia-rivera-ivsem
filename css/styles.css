@@ -181,6 +181,7 @@ body {
 @media (max-width: 600px) {
     .contenido-pagina {
         height: 300px;
+        font size 20px;
     }
 }
 
